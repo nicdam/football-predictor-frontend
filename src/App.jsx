@@ -7,8 +7,7 @@ export default function HybridPredictor() {
   const [fetchingData, setFetchingData] = useState(false);
 
   // NOTE: If you deploy to Render, change 'http://localhost:5000' to your Render URL.
-  const API_BASE = 'http://localhost:5000';
-
+const API_BASE = 'https://football-api-backend-e84s.onrender.com';
   useEffect(() => {
     fetch(`${API_BASE}/api/livescores`)
       .then(res => res.json())
