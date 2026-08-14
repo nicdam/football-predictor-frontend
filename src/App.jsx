@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 // ⚠️ REPLACE THIS WITH YOUR EXACT RENDER BACKEND URL (NO SLASH AT THE END)
-const API_BASE = [https://football-api-backend-e84s.onrender.com](https://football-api-backend-e84s.onrender.com) ' ;
+const API_BASE = https://football-api-backend-e84s.onrender.com ' ;
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('upcoming');
