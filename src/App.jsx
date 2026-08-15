@@ -22,15 +22,15 @@ export default function App() {
       if (Array.isArray(res.data)) {
         setMatches(res.data);
       } else {
-        setMatches([]);
+    setErrorMsg('Backend returned no matches. Check your ODDS_API_KEY in Render.');
       }
     } catch (err) {
       console.error('Error fetching matches:', err);
-      setErrorMsg(err.message || 'Failed to load matches from backend');
+      setErrorMsg(`Connection error: ${err.message || 'Server unresponsive'}`);
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
-
   const handleSelectOdd = (matchId, selection, oddValue) => {
     if (!oddValue || oddValue === '-') return;
     setSelectedBets(prev => {
